@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to KK AWS</h1>
-<h1 align="center"> KK FUNDA DEVOPS ENVIRONMENT WORLD at 8:00 AM to 9:00 AM on 25 May 2025 please reach out to me </h1>
+<h1 align="center"> KK FUNDA DEVOPS ENVIRONMENT WORLD at 8:00 AM to 10:00 AM on 26 May </h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
