@@ -1,107 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.*" %>
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>KK FUNDA Home Page</title>
-    <link href="images/kkfunda.jpg" rel="icon" type="image/jpg">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            text-align: center;
-            color: #004080;
-        }
-
-        .info-section {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .contact-section {
-            text-align: center;
-            background-color: #eaf2f8;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 800px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        a {
-            color: #004080;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>KK FUNDA Home Page</title>
+<link href="images/kkfunda.jpg" rel="icon">
+</head>
 </head>
 <body>
-
-<h1>Welcome to KK AWS DevOps Engineers</h1>
-<h2>KK FUNDA DEVOPS WORLD<br>8:00 AM to 10:00 AM on 26 May</h2>
-
+<h1 align="center">Welcome to KK AWS Devops Engineers</h1>
+<h1 align="center"> KK FUNDA DEVOPS WORLD at 8:00 AM to 10:00 AM on 26 May </h1>
 <hr>
+<br>
+	<h1><h3> Server Side IP Address </h3><br>
 
-<div class="info-section">
-    <h3>Server Side IP Address</h3>
-    <%
-        String ip = "";
-        InetAddress inetAddress = InetAddress.getLocalHost();
-        ip = inetAddress.getHostAddress();
-    %>
-    <p><strong>Server Host Name:</strong> <%= inetAddress.getHostName() %></p>
-    <p><strong>Server IP Address:</strong> <%= ip %></p>
-</div>
-
-<div class="info-section">
-    <h3>Client Side IP Address</h3>
-    <p><strong>Client IP Address:</strong> <%= request.getRemoteAddr() %></p>
-    <p><strong>Client Host Name:</strong> <%= request.getRemoteHost() %></p>
-</div>
-
+<% 
+String ip = "";
+InetAddress inetAddress = InetAddress.getLocalHost();
+ip = inetAddress.getHostAddress();
+out.println("Server Host Name :: "+inetAddress.getHostName()); 
+%>
+<br>
+<%out.println("Server IP Address :: "+ip);%>
+</h1>
+<br>
+<h1><h3> Client Side IP Address </h3><br>
+<%out.print( "Client IP Address :: " + request.getRemoteAddr() ); %><br>
+<%out.print( "Client Name Host :: "+ request.getRemoteHost() );%><br></h1>
 <hr>
-
-<div class="contact-section">
-    <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="100"><br><br>
-    <strong>KK FUNDA</strong><br>
-    Martha Halli, Bangalore<br>
-    📞 +91-9676831734<br>
-    ✉️ <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a><br>
-    <a href="mailto:kkeducation@gmail.com">Mail to KK FUNDA</a>
+<div style="text-align: center;">
+	<span>
+		<img src="images/kkfunda.jpg" alt="" width="100">
+	</span>
+	<span style="font-weight: bold;">
+		KK FUNDA, 
+		Martha Halli, Banglore,
+		Bangalore,
+		+91-9676831734,+91-9676831734
+		kkeducationblr@gmail.com
+		<br>
+		<a href="mailto:kkeducation@gmail.com">Mail to KK FUNDA</a>
+	</span>
 </div>
-
 <hr>
-
-<div class="info-section">
-    <p>Service: <a href="services/employee/getEmployeeDetails">Get Employee Details</a></p>
-</div>
-
+	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
-
-<footer>
-    <p>KK FUNDA Training & Development Center.</p>
-    <p><small>© 2024 by <a href="https://www.google.com" target="_blank">KK FUNDA</a></small></p>
-</footer>
+<hr>
+<p align=center>KK FUNDA Training, Development Center.</p>
+<p align=center><small>Copyrights 2024 by <a href="google.com/">KK FUNDA</a> </small></p>
 
 </body>
 </html>
